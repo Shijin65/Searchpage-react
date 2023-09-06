@@ -14,9 +14,7 @@ function App() {
   
 
   return (
-   <div className='App' 
-  //  style={{backgroundColor:colour}} 
-   >
+   <div className='App' style={{backgroundColor:colour}} >
     <h1>Search Bar Using API</h1>
     <div className='searchbar_container'>
         <SearchIn colour={colour} setdata={setdata}/>

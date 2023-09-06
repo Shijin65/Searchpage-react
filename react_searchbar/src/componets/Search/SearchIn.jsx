@@ -6,9 +6,6 @@ import {FaSearch} from 'react-icons/fa';
 export const SearchIn = ({colour,setdata}) => {
   const [text,settext]=useState("");
   
-
-  // const color=colour
-
 const fetchdata =(value)=>{
   fetch("https://jsonplaceholder.typicode.com/users")
   .then((responce)=>responce.json())
