@@ -11,8 +11,18 @@ const fetchdata =(value)=>{
   fetch("https://jsonplaceholder.typicode.com/users")
   .then((responce)=>responce.json())
   .then((json)=>{
-    console.log(json)
-  } )}
+    const result = json.filter((user) => {
+      return (
+        value &&
+        user && 
+        user.name && 
+        user.name.includes(value)
+        );
+    });
+    console.log(result)
+  } );
+
+}
 
 const handlechange = (value) => {
   settext(value)
