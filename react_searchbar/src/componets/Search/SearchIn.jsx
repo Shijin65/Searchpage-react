@@ -3,10 +3,12 @@ import './SearchIn.css'
 import {FaSearch} from 'react-icons/fa';
 
 
-export const SearchIn = (props) => {
+export const SearchIn = ({colour,setdata}) => {
   const [text,settext]=useState("");
-  const color=props.colour
-// console.log(text)
+  
+
+  // const color=colour
+
 const fetchdata =(value)=>{
   fetch("https://jsonplaceholder.typicode.com/users")
   .then((responce)=>responce.json())
@@ -19,7 +21,7 @@ const fetchdata =(value)=>{
         user.name.includes(value)
         );
     });
-    console.log(result)
+  setdata(result)
   } );
 
 }
@@ -28,13 +30,14 @@ const handlechange = (value) => {
   settext(value)
   fetchdata(value)
 }
- 
+
+  
   return (
     <div className='input_wrap'>
-        <FaSearch id='search_icon' style={{color:color}}/>
-        <input type='text' placeholder='You Can Start Here'
+      <input type='text' placeholder='You Can Start Here'
         value={text}
         onChange={(e)=> handlechange(e.target.value)}></input>
+      <a href={'https://www.google.com/search?q='+text}><FaSearch id='search_icon' style={{color:{colour}}} /></a>
         
     </div>
   )

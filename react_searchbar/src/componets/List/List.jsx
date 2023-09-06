@@ -1,8 +1,8 @@
 import React from 'react'
 import './list.css'
-export const List = () => {
+export const List = ({name}) => {
   return (
-    <div className='element' >List</div>
+    <div className='element' >{name}</div>
   )
 }
 
