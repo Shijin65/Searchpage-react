@@ -1,7 +1,7 @@
 import { useState,useEffect } from 'react'
 
 import './App.css'
-import { SearchIn } from './componets/SearchIn';
+import { SearchIn } from './componets/Search/SearchIn';
 
 function App() { 
   var x = Math. floor(Math. random() * 256);
@@ -14,7 +14,7 @@ function App() {
    <div className='App' style={{backgroundColor:colour}} >
     <h1>Search Bar Using API</h1>
     <div className='searchbar_container'>
-        <SearchIn/>
+        <SearchIn colour={colour}/>
         <div>Suggestion</div>
     </div>
    </div>
