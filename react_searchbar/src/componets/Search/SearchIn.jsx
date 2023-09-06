@@ -3,6 +3,8 @@ import './SearchIn.css'
 import {FaSearch} from 'react-icons/fa';
 export const SearchIn = (props) => {
   const color=props.colour
+
+  const fetchdata = ()=>{}
   return (
     <div className='input_wrap'>
         <FaSearch id='search_icon' style={{color:color}}/>
