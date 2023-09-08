@@ -2,12 +2,11 @@ import React,{useContext} from 'react'
 import './list.css'
 
 export const List = ({name}) => {
- 
-const handleclick=()=>{
-  setValue(name)
-}
+  
   return (
-    <div className='element' onClick={()=>handleclick()}>{name}</div>
+    <div>
+          <a href={'https://www.google.com/search?q='+name}><div className='element'>{name}</div></a>
+    </div>
   )
 }
 
